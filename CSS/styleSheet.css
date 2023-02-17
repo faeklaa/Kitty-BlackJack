@@ -1,0 +1,263 @@
+
+@font-face {
+    font-family: "Candara";
+    src: url('../Fonts/Candara.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Candara";
+    src: url('../Fonts/Candara_Bold.ttf')format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*---------Homepage background--------*/
+body {
+}
+
+/*-------- Elements of the Homepage --------*/
+header {
+    background-color: #fbd8e0;
+    display: flex;
+    width: 84%;
+    flex-direction: column;
+    justify-content: center;
+    border-top: #ed7e9a 3px ridge;
+    border-bottom: #ed7e9a 3px ridge;
+    border-radius: 6px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 10px;
+    opacity: 0.95;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 10px;
+		color: #ed7e9a;
+}
+
+#rulesText {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.button {
+    /*positioning*/
+    /*display*/
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 180px;
+    height: 60px;
+
+    /*text*/
+    color: white;
+    font-family: Candara;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.glow-on-hover {
+    background: #eea4b7;
+    cursor: pointer;
+    position: relative;
+	
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #fe6767, #feae6c, #fffd80, #99ff70, #7088ff, #fe6767);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 0.5;	
+}
+
+.glow-on-hover:after {
+    content: '';
+    position: absolute;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+
+}
+
+.btn {
+	display: flex;
+	background-position: center;
+    flex-direction: row;
+	justify-content: center;
+    list-style-type: none;
+	margin-left: 29px;
+	margin-top: 20px;
+	opacity: 0.95;
+}
+.active {
+    border: 2px solid #ffffff !important;
+}
+
+/*-------- Elements of the Rules Popup -------*/
+#rules_box {
+    /* positioning*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /*display*/
+    display: none;
+    /*display: flex;*/
+    flex-flow: column wrap;
+    width: 900px;
+    height: 700px;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: start;
+    border-radius: 12px;
+    /*colour*/
+    background-color: #fbd8e0;
+    border: 2px solid #eea4b7;
+    
+    /*text*/
+}
+
+.button_container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#rulesTitle {
+    color: #c08192;
+    font-family: Candara;
+    font-weight: bold;
+    font-size: 52px;
+    text-align: center;
+}
+
+#rulesText {
+    color: #c08192;
+    padding: 0px 40px;
+    font-family: Candara;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*---------Gamepage Styles--------*/
+#gamePage body {
+    text-align: center;
+    background-image: url('../Assets/gameBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#game_container h1 {
+    margin: 30px 310px 10px 310px;
+    font-family: Candara;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cards img{
+    height: 200px;
+    padding: 10px;
+
+    animation-name: slideIn;
+    animation-duration: 1.5s;
+}
+
+@keyframes slideIn{
+    0% {
+        opacity: 0.0;
+        transform: translateY(-600px) rotate(-40deg);
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1.0;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+#game_container {
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    transform: translateX(-46%) translateY(-40%);
+
+    display: flex;
+    flex-flow: row wrap;
+    width: 1650px;
+    height: 640px;
+    padding: 10px;
+    margin: 10px;
+    align-items: start;
+    justify-content: center;
+}
+
+.card_box {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 750px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameBTN_container {
+    top: 78%;
+}
