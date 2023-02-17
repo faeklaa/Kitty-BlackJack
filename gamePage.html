@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html id="gamePage">
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta charset="UTF-8">
+    <!-- Gamepage Title-->
+    <title>Kitty BlackJack</title>
+    <!--Linking Style Sheet and Javascript-->
+    <link rel="stylesheet" href="https://use.typekit.net/dnz4wbn.css">
+    <link rel="stylesheet" href="CSS/styleSheet.css">
+    <script src="JavaScript/gameScript.js"></script>
+</head>
+<body>
+    <img id="logo" src=" ./Assets/textLogo.png" />
+    <div id="game_container">
+        <h1>You: <span id="player_sum"></span></h1>
+        <h1>Dealer: <span id="dealer_sum"></span></h1>
+        <div class="card_box">
+            <div id="player_cards" class="cards"></div>
+        </div>
+        <div class="card_box">
+            <div id="dealer_cards" class="cards">
+                <img id="back" src="./cards/cardBack.png">
+            </div>
+        </div>
+        <div class="button_container">
+            <a id="hit" class="button active glow-on-hover">Hit</a>
+            <a id="stay" class="button active glow-on-hover">Stand</a>
+        </div>
+        <p id="results"></p>
+    </div>
+</body>
+</htmlid="gamePage">

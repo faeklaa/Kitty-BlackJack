@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+	<meta charset="UTF-8">
+	<!--Homepage Title-->
+	<title>Kitty BlackJack</title>
+	<!--Linking Style Sheet and JavaScript-->
+	<link rel="stylesheet" href="https://use.typekit.net/dnz4wbn.css">
+	<link rel="stylesheet" href="CSS/styleSheet.css">
+	<script src="JavaScript/homeScript.js"></script>
+</head>
+
+<body>
+	<!--Home Page-->
+	<header>
+		<h1 id="Kitty Blackjack">
+			<img id ="logo" src=" ./Assets/textLogo.png" />
+			<img id="menuCat" src="./Assets/menu_cat.png"/>
+		</h1>
+			<ul class="nav-section">
+				<li><a id="rulesBTN" class="button btnUnsquish active glow-on-hover">Rules</a></li>
+				<li><a class="button active glow-on-hover" href="gamePage.html">Play</a></li>
+			</ul>
+	</header>
+	<!--Rules Popup-->
+	<div id="rules_box">
+		<!--we can replace this header with a drawn png title-->
+		<h1 id="rulesTitle">Rules</h1>
+
+		<p id="rulesText">
+			There are two players in Blackjack, you and the dealer (computer). <br /><br />
+
+			Your goal is to beat the dealer by having a higher point score. Blackjack cards are
+			scored by their point total. The person with the highest total score, that isn’t above 21,
+			wins the round. A point score higher than 21 is a loss. The cards 2 through 10 are worth
+			their number value, and the face cards (jack, queen, king) are all worth 10. An ace is worth 11,
+			unless this creates a total score higher than 21, in which case it is worth 1.<br /><br />
+
+			You have two options as you play: hit or stand.<br /><br />
+
+			Hit: You take another card, and its value gets added onto your score<br />
+			Stand: You take no more cards and your current score is your final score<br /><br />
+
+			Try to beat the dealer as many times as you can!
+
+		</p>
+
+		<div class="button_container">
+			<a id="closeBTN" class="button active glow-on-hover">Close</a>
+			<a id="playBTN" class="button active glow-on-hover" href="gamePage.html">Play</a>
+		</div>
+	</div>
+</body>
+
+</html>
